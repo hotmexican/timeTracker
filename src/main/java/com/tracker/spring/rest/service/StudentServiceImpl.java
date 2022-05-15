@@ -10,8 +10,13 @@ import java.util.List;
 
 @Service
 public class StudentServiceImpl implements StudentService{
+
+    private final StudentDAO studentDAO;
+
     @Autowired
-    private StudentDAO studentDAO;
+    public StudentServiceImpl(StudentDAO studentDAO) {
+        this.studentDAO = studentDAO;
+    }
 
     @Override
     @Transactional

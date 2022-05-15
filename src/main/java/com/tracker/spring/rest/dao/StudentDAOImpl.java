@@ -11,8 +11,12 @@ import java.util.List;
 
 @Repository
 public class StudentDAOImpl implements StudentDAO{
+    private final SessionFactory sessionFactory;
     @Autowired
-    private SessionFactory sessionFactory;
+    public StudentDAOImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+
+    }
 
     @Override
     public List<Student> getAllStudents() {
