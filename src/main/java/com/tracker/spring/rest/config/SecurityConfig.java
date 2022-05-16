@@ -1,6 +1,7 @@
 package com.tracker.spring.rest.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
@@ -14,5 +15,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.inMemoryAuthentication()
                 .withUser(userBuilder.username("admin").password("12345").roles("ADMIN"))
                 .withUser(userBuilder.username("user").password("54321").roles("STUDENT"));
+    }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
     }
 }
