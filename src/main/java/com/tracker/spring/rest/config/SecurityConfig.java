@@ -16,8 +16,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser(userBuilder.username("admin").password("12345").roles("ADMIN"))
                 .withUser(userBuilder.username("user").password("54321").roles("STUDENT"));
     }
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.csrf().disable();
+//    }
 }
