@@ -3,7 +3,6 @@ package com.tracker.spring.rest.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -35,7 +34,7 @@ public class SpringfoxConfig {
                 "blabla@gmail.com",
                 new Contact("API owner", "www.ownersite.com","owner@gmail.com"),
                 "api_license",
-                "http://www.lecense.edu.com",
+                "https://www.lecense.edu.com",
                 new ArrayList<>()
         );
     }

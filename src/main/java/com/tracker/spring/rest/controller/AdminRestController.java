@@ -3,7 +3,6 @@ package com.tracker.spring.rest.controller;
 import com.tracker.spring.rest.entity.Student;
 import com.tracker.spring.rest.exception_handling.NoSuchStudentException;
 import com.tracker.spring.rest.service.StudentService;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
