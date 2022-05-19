@@ -2,6 +2,7 @@ package com.tracker.spring.rest.entity;
 
 
 
+import com.tracker.spring.rest.dao.TaskDAOImpl;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -41,6 +42,14 @@ public class Student {
         this.name = name;
         this.surname = surname;
     }
+
+//    public void addTaskWithStudent(Task task){
+//        if(tasks==null){
+//            tasks = new ArrayList<>();
+//        }
+//        tasks.add(task);
+//
+//    }
 
     public int getId() {
         return id;

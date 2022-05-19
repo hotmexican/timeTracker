@@ -8,9 +8,12 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
+@Transactional      //Почему с добавлением этой аннотацмии стало записывать Таски, и без студентID
+                    //И почему оно работает так же, как если бы над каждым методом отдельно
 public class TaskDAOImpl implements DAO<Task>{
 
     private final SessionFactory sessionFactory;
