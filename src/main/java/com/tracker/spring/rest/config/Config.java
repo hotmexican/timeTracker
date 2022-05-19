@@ -36,7 +36,7 @@ public class Config implements WebMvcConfigurer {
             dataSource.setDriverClass("org.postgresql.Driver");
             dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
             dataSource.setUser("postgres");
-            dataSource.setPassword("123");
+            dataSource.setPassword("6631");
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }
