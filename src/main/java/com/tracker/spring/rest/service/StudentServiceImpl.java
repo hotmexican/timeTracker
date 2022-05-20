@@ -1,6 +1,6 @@
 package com.tracker.spring.rest.service;
 
-import com.tracker.spring.rest.dao.StudentDAO;
+import com.tracker.spring.rest.dao.DAO;
 import com.tracker.spring.rest.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,36 +9,36 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements ServiceInterface<Student>{
 
-    private final StudentDAO studentDAO;
+    private final DAO<Student> studentDAO;
 
     @Autowired
-    public StudentServiceImpl(StudentDAO studentDAO) {
+    public StudentServiceImpl(DAO<Student> studentDAO) {
         this.studentDAO = studentDAO;
     }
 
     @Override
     @Transactional
-    public List<Student> getAllStudents() {
-        return studentDAO.getAllStudents();
+    public List<Student> getAll() {
+        return studentDAO.getAll();
     }
 
     @Override
     @Transactional
-    public void saveStudent(Student student) {
-        studentDAO.saveStudent(student);
+    public void save(Student student) {
+        studentDAO.save(student);
     }
 
     @Override
     @Transactional
-    public Student getStudent(int id) {
-        return studentDAO.getStudent(id);
+    public Student get(int id) {
+        return studentDAO.get(id);
     }
 
     @Override
     @Transactional
-    public void deleteStudent(int id) {
-        studentDAO.deleteStudent(id);
+    public void delete(int id) {
+        studentDAO.delete(id);
     }
 }

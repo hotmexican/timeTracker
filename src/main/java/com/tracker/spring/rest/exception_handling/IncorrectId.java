@@ -1,9 +1,9 @@
 package com.tracker.spring.rest.exception_handling;
 
-public class StudentIncorectId {
+public class IncorrectId {
     private String info;
 
-    public StudentIncorectId() {
+    public IncorrectId() {
     }
 
     public String getInfo() {
