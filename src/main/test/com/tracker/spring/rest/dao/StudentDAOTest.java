@@ -2,7 +2,6 @@ package com.tracker.spring.rest.dao;
 
 
 import com.tracker.spring.rest.config.HibernateConfig;
-import com.tracker.spring.rest.dao.DAO;
 import com.tracker.spring.rest.entity.Student;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 //@Testcontainers
