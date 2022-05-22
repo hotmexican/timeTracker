@@ -1,9 +1,5 @@
 package com.tracker.spring.rest.dao;
 
-import com.tracker.spring.rest.entity.Student;
-import com.tracker.spring.rest.entity.Task;
-import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 public interface DAO<T> {
